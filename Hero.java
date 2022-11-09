@@ -14,27 +14,43 @@ public class Hero {
     private int attack;
     private boolean dead;
 
+    /**
+     * 自身の名前を返すゲッターメソッド。
+     * @return 指定されたStringフィールドの値
+     */
     public String getName(){
         return this.name;
     }
 
+    /**
+     * 自身のHPを返すゲッターメソッド。
+     * @return 指定されたintフィールドの値
+     */
     public int getHitPoint(){
         return this.hitPoint;
     }
 
+    /**
+     * 自身の攻撃力を返すゲッターメソッド。
+     * @return 指定されたintフィールドの値
+     */
     public int getAttack(){
         return this.attack;
     }
 
+    /**
+     * 自身の死亡判定を返すゲッターメソッド。
+     * @return 指定されたbooleanフィールドの値
+     */
     public boolean isDead(){
         return this.dead;
     }
 
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
-     * @param name ヒーロー名
-     * @param maximumHP ヒーローのHP
-     * @param attack ヒーローの攻撃力
+     * @param _name ヒーロー名
+     * @param _maximumHP ヒーローのHP
+     * @param _attack ヒーローの攻撃力
      */
     public Hero (String _name, int _maximumHP, int _attack) {
         this.setName(_name);
@@ -44,14 +60,26 @@ public class Hero {
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", _name, _maximumHP, _attack);
     }
 
+    /**
+     * 自身の名前を設定するセッターメソッド。
+     * @param _name String型変数nameに代入する値
+     */    
     public void setName(String _name){
         this.name = _name;
     }
 
+    /**
+     * 自身のHPを設定するセッターメソッド。
+     * @param _maximumHP int型変数hitPointに代入する値
+     */    
     public void setHitPoint(int _maximumHP){
         this.hitPoint = _maximumHP;
     }
 
+    /**
+     * 自身の攻撃力を設定するセッターメソッド。
+     * @param _attack int型変数attackに代入する値
+     */
     public void setAttack(int _attack){
         this.attack = _attack;
     }

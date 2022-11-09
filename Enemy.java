@@ -14,27 +14,43 @@ public class Enemy {
     private int attack;
     private boolean dead;
 
+    /**
+     * モンスター名を返すゲッターメソッド。
+     * @return 指定されたStringフィールドの値
+     */
     public String getName(){
         return this.name;
     }
 
+    /**
+     * モンスターのHPを返すゲッターメソッド。
+     * @return 指定されたintフィールドの値
+     */
     public int getHitPoint(){
         return this.hitPoint;
     }
 
+    /**
+     * モンスターの攻撃力を返すゲッターメソッド。
+     * @return 指定されたintフィールドの値
+     */
     public int getAttack(){
         return this.attack;
     }
 
+    /**
+     * モンスターの死亡判定を返すゲッターメソッド。
+     * @return 指定されたbooleanフィールドの値
+     */
     public boolean isDead(){
         return this.dead;
     }
 
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
-     * @param name モンスター名
-     * @param maximumHP モンスターのHP
-     * @param attack モンスターの攻撃力
+     * @param _name モンスター名
+     * @param _maximumHP モンスターのHP
+     * @param _attack モンスターの攻撃力
      */
     public Enemy (String _name, int _maximumHP, int _attack) {
         this.setName(_name);
@@ -44,14 +60,26 @@ public class Enemy {
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", _name, _maximumHP, _attack);
     }
 
+    /**
+     * モンスター名を設定するセッターメソッド。
+     * @param _name String型変数nameに代入する値
+     */    
     public void setName(String _name){
         this.name = _name;
     }
 
+    /**
+     * モンスターのHPを設定するセッターメソッド。
+     * @param _maximumHP int型変数hitPointに代入する値
+     */    
     public void setHitPoint(int _maximumHP){
         this.hitPoint = _maximumHP;
     }
 
+    /**
+     * モンスターの攻撃力を設定するセッターメソッド。
+     * @param _attack int型変数attackに代入する値
+     */
     public void setAttack(int _attack){
         this.attack = _attack;
     }
